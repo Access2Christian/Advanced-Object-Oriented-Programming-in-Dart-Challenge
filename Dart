@@ -1,0 +1,59 @@
+// Class representing a Student
+class Student {
+  String name;  // Student's name
+  int age;      // Student's age
+  int gradeLevel; // Student's grade level
+
+  // Constructor to initialize the student's properties
+  Student(this.name, this.age, this.gradeLevel);
+
+  // Method to print the student's information
+  void printStudentInfo() {
+    print("Student Name: $name");
+    print("Age: $age");
+    print("Grade Level: $gradeLevel");
+  }
+}
+
+// Class representing a Teacher
+class Teacher {
+  String name;  // Teacher's name
+  int age;      // Teacher's age
+  String subject; // Subject the teacher teaches
+
+  // Constructor to initialize the teacher's properties
+  Teacher(this.name, this.age, this.subject);
+
+  // Method to print the teacher's information
+  void printTeacherInfo() {
+    print("Teacher Name: $name");
+    print("Age: $age");
+    print("Subject: $subject");
+  }
+}
+
+// Class to manage the school, creating and printing info for students and teachers
+class School {
+  // Method to create Student and Teacher objects and print their info
+  void createAndPrintInfo() {
+    // Creating a Student object
+    Student student = Student("Alice Johnson", 14, 9);
+
+    // Creating a Teacher object
+    Teacher teacher = Teacher("Mr. Smith", 35, "Mathematics");
+
+    // Printing the student's information
+    student.printStudentInfo();
+    print(""); // Print an empty line for spacing between outputs
+
+    // Printing the teacher's information
+    teacher.printTeacherInfo();
+  }
+}
+
+// Main function to execute the program
+void main() {
+  // Creating a School object and calling the method to print info
+  School school = School();
+  school.createAndPrintInfo();
+}
